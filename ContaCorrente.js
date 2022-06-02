@@ -7,22 +7,15 @@ export class ContaCorrente extends Conta{
         ContaCorrente.numeroDeContas++;
     };
 
-/*     sacar(valor){
-        if (this._saldo >= valor){
-            this._saldo -= valor;
-            return valor;
-        };
-    };
+    teste(){
+        super.teste()
+        console.log("teste na classe conta")
+    }
 
-    depositar(valor){
-        if(valor <= 100){
-            return; //early return
-        }
-        this._saldo += valor;
-    };
+    // Sobrescrevendo o comportamento de sacar
+    sacar(valor){
+        let taxa = 1.5;
+        return this._sacar(valor, taxa)
+    }
 
-    transferir(valor, conta){
-        const valorSacado = this.sacar(valor);
-        conta.depositar(valorSacado);
-    } */
 };
